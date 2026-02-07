@@ -33,12 +33,16 @@ G = 6.6743E-11; % gravatational constant (m^3kg^-1s^-2)
 alt = sqrt(Obj(2)^2 + Obj(3)^2 + Obj(4)^2);
 r = E_radius + alt; % Satellite radius from earth center (km)
 u_r = [Obj(2)/r,Obj(3)/r, Obj(4)/r];
+
 F(1) = G*(E_mass.*Obj(1))./(r/1000).^2; % Magnitude of force and its components (N)
 F(2) = F(1).*u_r(1); 
 F(3) = F(1).*u_r(2); 
 F(4) = F(1).*u_r(3);
+
 CDA = [acos(F(2)./F(1)), acos(F(3)./F(1)), acos(F(4)./F(1))];
 v = [Obj(5).*u_r(1), Obj(5).*u_r(2), Obj(5).*u_r(3)];
 a = [Obj(6).*u_r(1), Obj(6).*u_r(2), Obj(6).*u_r(3)];
+
 end
+
 
