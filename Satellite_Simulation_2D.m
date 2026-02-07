@@ -1,4 +1,4 @@
-function [F, CDA, v, a] = Satellite_Simulation_2D(Obj)
+function [F, CDA, v, a] = Satellite_Simulation_3D(Obj)
 %determines the inital velocty magnitude as well as the x, y, z components
 %{
 Input Arguments:
@@ -41,3 +41,4 @@ CDA = [acos(F(2)./F(1)), acos(F(3)./F(1)), acos(F(4)./F(1))];
 v = [Obj(5).*u_r(1), Obj(5).*u_r(2), Obj(5).*u_r(3)];
 a = [Obj(6).*u_r(1), Obj(6).*u_r(2), Obj(6).*u_r(3)];
 end
+
