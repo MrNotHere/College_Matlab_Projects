@@ -22,7 +22,10 @@ a (x, y, z components of accleration)
 
 %}
 
-Obj_1 = [1, 300, 280, 180, 100, 50];
-[F_1, CDA_1, v_1, a_1] = Satellite_Simulation_3D(Obj_1)
+Obj_1 = [1, 300, 280, 180]; 
+accel_ = [25, 50, 75]; %inital velocity 
+vel_i = [20, 40, 60]; %initial aceel
+[F_1, CDA_1, a_1] = Satellite_Simulation_3D(Obj_1)
+
 
 
